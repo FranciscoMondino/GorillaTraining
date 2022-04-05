@@ -1,0 +1,140 @@
+.box {
+    border-radius: 6px;
+    width: 80px;
+    height: 40px;
+    margin: 50px auto;
+
+}
+
+.box-uno{
+    background-color: aqua;
+}
+
+.box-dos{
+    background-color: aquamarine;
+    /* trasnition-property y transiotion-duration*/
+    transition: all .8s;
+}
+
+.box:hover {
+    transform: scale(4);
+}
+
+
+
+.container-circle div {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+/*curva de velocidad*/
+
+.circle1 {
+    background-color: blueviolet;
+    transition: all 1.5s linear;
+}
+
+.circle2 {
+    background-color:blue ;
+    transition: all 1.5s ease-in;
+}
+
+.circle3 {
+    background-color: rgb(104, 87, 121);
+    transition: all 1.5s ease-in-out;
+}
+
+.circle4 {
+    background-color: brown;
+    transition: all 1.5s ease-out;
+}
+
+.circle5 {
+    background-color: yellow;
+    transition: all 1.5s ease;
+}
+
+.container-circle:hover .circle1,
+.container-circle:hover .circle2,
+.container-circle:hover .circle3,
+.container-circle:hover .circle4,
+.container-circle:hover .circle5 {
+    transform: translateX(200px);
+}
+
+.square-uno, .square-dos {
+    border-radius: 4px;
+    height: 150px;
+    width: 150px;
+    margin: 100px;
+    position: absolute;
+}
+
+.square-uno {
+    background-color: blue;
+}
+
+.square-dos {
+    background-color: black;
+}
+
+.square-dos:hover {
+    transform: translate(40px, 40px);
+    transition: all .8s;
+    opacity: 0.2;
+}
+
+.combinado {
+    background-color: coral;
+    height: 75px;
+    width: 75px;
+    margin: 50px auto;
+    transition: all 2s;
+}
+
+.combinado:hover {
+    transform: rotate(90deg) scale(2) translateX(120px);
+
+    /*prefijos*/
+    
+}
+
+.animation {
+    width: 120px;
+    height: 120px;
+    margin: 50px auto;
+    background-color: rgb(126, 151, 14);
+}
+
+.animation:hover {
+    animation: changeColor 4s;
+
+}
+
+/* controlar los fotogramas d ela animacion*/
+
+@keyframes changeColor {
+    0%{
+        background-color: blue;
+    }
+
+    15% {
+        background-color: aquamarine;
+        border-radius: 80px;
+    }
+
+    25% {
+        width: 80px;
+    }
+
+    50% {
+        border: 8px solid black;
+    }
+
+    100% {
+        background-color: blanchedalmond;
+    }
+
+}
